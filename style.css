@@ -7,7 +7,7 @@ body {
 body {
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-row-gap: 10px;
 }
 article {
@@ -16,7 +16,7 @@ article {
 
 #navbar {
     border: 1px solid black;
-    grid-column: 1/4;
+    grid-column: 1/5;
     height: 400px;
     overflow-y: scroll;
     margin-left: 0;
@@ -41,13 +41,13 @@ header {
     padding: 20px;
 }
 #main-doc {
-    grid-column: 1/4;
+    grid-column: 1/5;
 }
 .main-section header {
     font-size: 24px;
 }
 
-a {
+.nav-link {
     text-decoration: none;
     color: black;
 }
@@ -60,15 +60,33 @@ a:visited {
     line-height: 1.5em; 
     margin: 1.5em 20px;
 }
+
+code{
+      display:block;
+      text-align: left;
+      white-space: pre;
+      position: relative;
+      word-break: normal;
+      word-wrap: normal;
+      line-height: 2;
+      background-color:#f7f7f7;
+      padding:5px;
+    margin:1px;
+      border-radius:5px;
+      font-weight: bold;
+  }
 @media only screen and (min-width: 815px){
     #navbar {
         grid-column: 1/2;
         height: 100%;
         max-height: 100%;
         overflow: hidden;
+        position: fixed;
     }
     #main-doc {
-        grid-column: 2/4;
+        grid-column: 2/5;
+        margin-left: 0;
+        padding-left: 0;
     }
 
     #main-doc header {
